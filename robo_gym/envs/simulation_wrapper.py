@@ -17,6 +17,7 @@ class Simulation:
         self.robot_server_ip = None
         self.cmd = cmd
         self.gui = gui
+
         if ip:
             if lower_bound_port and upper_bound_port:
                 self.sm_client = sm_client.Client(ip,lower_bound_port,upper_bound_port)
@@ -28,9 +29,7 @@ class Simulation:
     def _start_sim(self,):
         """Start a new simulated Robot Server.
         """
-
         self.robot_server_ip = self.sm_client.start_new_server(cmd = self.cmd, gui = self.gui)
-
 
     def kill_sim(self,):
         """Kill the simulated Robot Server.

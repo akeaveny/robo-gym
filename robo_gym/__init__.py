@@ -2,6 +2,20 @@ from gym.envs.registration import register
 
 # naming convention: EnvnameRobotSim
 
+## UWRT_ARM Environments
+register(
+    id='UWRTArmSim-v0',
+    entry_point='robo_gym.envs:UWRTArmSim',
+    max_episode_steps=5000
+)
+
+## Gen3 Environments
+register(
+    id='Gen3Lite2FArmEnv-v0',
+    entry_point='robo_gym.envs:Gen3Lite2FArmSim',
+    max_episode_steps=500
+)
+
 ## Mir100 Environments
 register(
     id='NoObstacleNavigationMir100Sim-v0',
@@ -52,11 +66,6 @@ register(
     max_episode_steps=300
 )
 
-register(
-    id='MovingBoxTargetUR5DoF3Sim-v0',
-    entry_point='robo_gym.envs:MovingBoxTargetUR5DoF3Sim',
-    max_episode_steps=1000
-)
 
 ## UR10 Environments
 register(
