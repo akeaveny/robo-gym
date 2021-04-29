@@ -1,3 +1,0 @@
-#!/bin/bash
-
-tmux a -t "server_manager" 
